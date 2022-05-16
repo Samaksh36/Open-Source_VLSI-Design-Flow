@@ -1,5 +1,0 @@
-Michael Scott	 Boss	    10000
-Andrew Bernard   Sales	    5000
-Jim Halpert	 Sales	    9000		
-Darryl Phylman	 ARM        8000
-Dwight Schrude   ATRM       7000
