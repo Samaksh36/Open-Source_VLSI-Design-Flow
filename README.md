@@ -1,9 +1,9 @@
 # VLSI-Design-Flow-Tools
-## Course: VLSI Design Flow
-## Institute: IIITD
-## Semester: Winter 2022
-## Advisor: Dr Sneh Saurabh
-### All tools are Open Source
+### Institute: Indraprastha Institute of Information Technology, Delhi
+### Instructor: Dr Sneh Saurabh
+### Course: VLSI Design Flow
+### Semester: Winter 2022
+### Abstract: RTL to GDS via Open Source Tools 
 
 Assignment 1:
 Basics of Linux
