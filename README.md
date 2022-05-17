@@ -5,6 +5,7 @@
 ### Semester: Winter 2022
 ### Abstract: RTL to GDS via Open Source Tools 
 
+```
 Assignment 1:
 Basics of Linux
 
@@ -28,3 +29,4 @@ Atalanta for Stuck at Fault Detection
 
 Assignment 8:
 openROAD for Physical Design
+```
