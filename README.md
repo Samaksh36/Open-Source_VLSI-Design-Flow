@@ -6,27 +6,27 @@
 ### Abstract: RTL to GDS via Open Source Tools 
 
 ```
-Assignment 1:
+Assignment 1
 Basics of Linux
 
-Assignment 2:
+Assignment 2
 BAMBU for HLS
 
-Assignment 3:
+Assignment 3
 ICARUS Verilog and gtkwave for RTL creation and simulation
 
-Assignment 4:
+Assignment 4
 Yosys and .sdc commands for Logic Synthesis
 
-Assignment 5:
+Assignment 5
 OpenSTA for Static Timing Analysis
 
-Assignment 6:
+Assignment 6
 CEC tool for Equivalence
 
-Assignment 7:
+Assignment 7
 Atalanta for Stuck at Fault Detection
 
-Assignment 8:
+Assignment 8
 openROAD for Physical Design
 ```
