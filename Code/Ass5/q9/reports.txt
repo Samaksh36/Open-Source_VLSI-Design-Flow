@@ -1,0 +1,56 @@
+Startpoint: Ff1 (rising edge-triggered flip-flop clocked by clk)
+Endpoint: Ff3 (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.02    0.02   clock network delay (propagated)
+   0.00    0.02 ^ Ff1/CK (SDFFX1)
+   0.07    0.09 ^ Ff1/Q (SDFFX1)
+   0.01    0.10 v Nand1/Y (NAND2X1)
+   0.00    0.10 v Ff3/D (SDFFX1)
+           0.10   data arrival time
+
+   0.00    0.00   clock clk (rise edge)
+   0.04    0.04   clock network delay (propagated)
+   0.00    0.04   clock reconvergence pessimism
+           0.04 ^ Ff3/CK (SDFFX1)
+  -0.01    0.02   library hold time
+           0.02   data required time
+---------------------------------------------------------
+           0.02   data required time
+          -0.10   data arrival time
+---------------------------------------------------------
+           0.08   slack (MET)
+
+
+Startpoint: in2 (input port clocked by clk)
+Endpoint: Ff2 (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (propagated)
+   1.00    1.00 v input external delay
+   0.00    1.00 v in2 (in)
+   0.01    1.01 ^ Inv7/Y (CLKINVX1)
+   0.00    1.01 ^ Ff2/D (SDFFX1)
+           1.01   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.02   10.02   clock network delay (propagated)
+   0.00   10.02   clock reconvergence pessimism
+          10.02 ^ Ff2/CK (SDFFX1)
+  -0.05    9.97   library setup time
+           9.97   data required time
+---------------------------------------------------------
+           9.97   data required time
+          -1.01   data arrival time
+---------------------------------------------------------
+           8.96   slack (MET)
+
+

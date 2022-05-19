@@ -1,0 +1,58 @@
+Startpoint: FF1 (rising edge-triggered flip-flop clocked by clk)
+Endpoint: FF3 (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   1.90    1.90   clock network delay (ideal)
+   0.00    1.90 ^ FF1/CK (SDFFX1)
+   0.15    2.05 ^ FF1/Q (SDFFX1)
+   0.01    2.07 v NAND1/Y (NAND2X1)
+   0.00    2.07 v FF3/D (SDFFX1)
+           2.07   data arrival time
+
+   0.00    0.00   clock clk (rise edge)
+   1.90    1.90   clock network delay (ideal)
+   0.05    1.95   clock uncertainty
+   0.00    1.95   clock reconvergence pessimism
+           1.95 ^ FF3/CK (SDFFX1)
+   0.10    2.05   library hold time
+           2.05   data required time
+---------------------------------------------------------
+           2.05   data required time
+          -2.07   data arrival time
+---------------------------------------------------------
+           0.02   slack (MET)
+
+
+Startpoint: in2 (input port clocked by clk)
+Endpoint: FF2 (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   1.90    1.90   clock network delay (ideal)
+   1.00    2.90 v input external delay
+   0.00    2.90 v in2 (in)
+   0.01    2.91 ^ INV3/Y (CLKINVX1)
+   0.00    2.91 ^ FF2/D (SDFFX1)
+           2.91   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   1.90   11.90   clock network delay (ideal)
+  -0.20   11.70   clock uncertainty
+   0.00   11.70   clock reconvergence pessimism
+          11.70 ^ FF2/CK (SDFFX1)
+  -0.01   11.69   library setup time
+          11.69   data required time
+---------------------------------------------------------
+          11.69   data required time
+          -2.91   data arrival time
+---------------------------------------------------------
+           8.79   slack (MET)
+
+

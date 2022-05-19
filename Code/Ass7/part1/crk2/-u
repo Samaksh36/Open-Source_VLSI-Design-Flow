@@ -1,0 +1,65 @@
+* Log file for the circuit top.v.bench.
+* Number of faults detected by each test pattern:
+
+w1 /1
+      1: 0010 0
+C /1
+      1: 1x00 0
+w3 /0
+      1: xx00 0
+      2: 0010 0
+Z /0
+      1: 1x10 1
+      2: 0110 1
+A /0
+      1: 1010 1
+B /0
+      1: 0110 1
+D /0
+      1: 1x11 0
+Z /1
+      1: xxx1 0
+      2: xx00 0
+      3: 0010 0
+
+End of test pattern generation.
+
+	*******************************************************
+	*                                                     *
+	*          Welcome to atalanta (version 2.0)          *
+	*                                                     *
+	*               Dong S. Ha (ha@vt.edu)                *
+	*            Web: http://www.ee.vt.edu/ha             *
+	*  Virginia Polytechnic Institute & State University  *
+	*                                                     *
+	*******************************************************
+
+******   SUMMARY OF TEST PATTERN GENERATION RESULTS   ******
+1. Circuit structure
+   Name of the circuit                       : #comment
+   Number of primary inputs                  : 4
+   Number of primary outputs                 : 1
+   Number of gates                           : 5
+   Level of the circuit                      : 5
+
+2. ATPG parameters
+   Test pattern generation Mode              : DTPG + TC
+   Backtrack limit                           : 10
+   Initial random number generator seed      : 1650400864
+   Test pattern compaction Mode              : NONE 
+
+3. Test pattern generation results
+   Number of test patterns                   : 12
+   Fault coverage                            : 100.000 %
+   Number of collapsed faults                : 8
+   Number of identified redundant faults     : 0
+   Number of aborted faults                  : 0
+   Total number of backtrackings             : 8
+
+4. Memory used                               : 0.000 MB
+
+5. CPU time
+   Initialization                            : 0.000 Secs
+   Fault simulation                          : 0.000 Secs
+   FAN                                       : 0.000 Secs
+   Total                                     : 0.000 Secs

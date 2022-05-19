@@ -1,0 +1,29 @@
+* Name of circuit:  top.v.bench
+* Primary inputs :
+  A B C D 
+  
+* Primary outputs:
+  Z 
+
+* Test patterns and fault free responses:
+
+w1 /1
+      1: 0010 0
+C /1
+      1: 1x00 0
+w3 /0
+      1: xx00 0
+      2: 0010 0
+Z /0
+      1: 1x10 1
+      2: 0110 1
+A /0
+      1: 1010 1
+B /0
+      1: 0110 1
+D /0
+      1: 1x11 0
+Z /1
+      1: xxx1 0
+      2: xx00 0
+      3: 0010 0
