@@ -1,0 +1,115 @@
+$date
+	Fri Feb 18 01:44:00 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module vdfsm_tb $end
+$var wire 1 ! speed_3 $end
+$var wire 1 " speed_2 $end
+$var wire 1 # speed_1 $end
+$var wire 1 $ speed_0 $end
+$var reg 1 % L $end
+$var reg 1 & R $end
+$var reg 1 ' clk $end
+$var reg 1 ( reset $end
+$scope module uut $end
+$var wire 1 % L $end
+$var wire 1 & R $end
+$var wire 1 ' clk $end
+$var wire 1 ( reset $end
+$var wire 1 ! speed_3 $end
+$var wire 1 " speed_2 $end
+$var wire 1 # speed_1 $end
+$var wire 1 $ speed_0 $end
+$var reg 2 ) next_state [1:0] $end
+$var reg 2 * state [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 *
+b0 )
+1(
+1'
+0&
+0%
+1$
+0#
+0"
+0!
+$end
+#2000
+0(
+#4000
+b11 )
+1%
+#5000
+0'
+#10000
+0$
+1!
+b10 )
+b11 *
+1'
+#14000
+b0 )
+1&
+0%
+#15000
+0'
+#20000
+1$
+0!
+b1 )
+b0 *
+1'
+#25000
+0'
+#30000
+0$
+1#
+b10 )
+b1 *
+1'
+#35000
+0'
+#40000
+0#
+1"
+b11 )
+b10 *
+1'
+#44000
+b1 )
+1%
+0&
+#45000
+0'
+#50000
+1#
+0"
+b0 )
+b1 *
+1'
+#55000
+0'
+#60000
+1$
+0#
+b11 )
+b0 *
+1'
+#65000
+0'
+#70000
+0$
+1!
+b10 )
+b11 *
+1'
+#74000

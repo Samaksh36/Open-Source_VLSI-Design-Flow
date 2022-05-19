@@ -1,0 +1,87 @@
+
+13. Executing ABC pass (technology mapping using ABC).
+
+13.1. Extracting gate netlist of module `\MyFSM' to `/tmp/yosys-abc-9T8Zam/input.blif'..
+Extracted 23 gates and 30 wires to a netlist network with 5 inputs and 5 outputs.
+
+13.1.1. Executing ABC.
+Running ABC command: /usr/local/bin/yosys-abc -s -f /tmp/yosys-abc-9T8Zam/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-9T8Zam/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-9T8Zam/input.blif 
+ABC: + read_lib -w /home/samaksh19200/Ass4/Ques4/NanGate_15nm_OCL_fast_conditional_ccs.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.66 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "ANTENNA" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFRNQ_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFSNQ_X1".
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLTIE" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILL_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILL_X2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILL_X4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILL_X8" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILL_X16" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "LHQ_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFRNQ_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFSNQ_X1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X12".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X16".
+ABC: Scl_LibertyReadGenlib() skipped cell "TIEH" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "TIEL" due to dont_use attribute.
+ABC: Library "NanGate_15nm_OCL" from "/home/samaksh19200/Ass4/Ques4/NanGate_15nm_OCL_fast_conditional_ccs.lib" has 55 cells (12 skipped: 5 seq; 6 tri-state; 1 no func; 9 dont_use).  Time =     0.67 sec
+ABC: Memory =  120.55 MB. Time =     0.67 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "FA_X1").
+ABC: + read_constr -v /home/samaksh19200/Ass4/Ques4/constraint.sdc 
+ABC: Setting driving cell to be "CLKBUFX8".
+ABC: Setting output load to be 100.000000.
+ABC: + strash 
+ABC: + ifraig 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 10 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 10 
+ABC: + &put 
+ABC: + buffer 
+ABC: Cannot find the default PI driving cell (CLKBUFX8) in the library.
+ABC: + upsize -D 10 
+ABC: Cannot find the default PI driving cell (CLKBUFX8) in the library.
+ABC: + dnsize -D 10 
+ABC: Cannot find the default PI driving cell (CLKBUFX8) in the library.
+ABC: + stime -p 
+ABC: Cannot find the default PI driving cell (CLKBUFX8) in the library.
+ABC: WireLoad = "none"  Gates =     16 ( 56.2 %)   Cap = 26.8 ff ( 42.2 %)   Area =        8.75 ( 31.2 %)   Delay =    23.17 ps  ( 31.2 %)               
+ABC: Path  0 --       3 : 0    2 pi      A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  15.0 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      16 : 1    3 INV_X16 A =   0.88  Df =   0.6   -0.0 ps  S =   0.5 ps  Cin = 13.6 ff  Cout =   2.7 ff  Cmax =1600.0 ff  G =   19  
+ABC: Path  2 --      18 : 4    2 AND4_X1 A =   0.44  Df =   8.4   -2.8 ps  S =   4.9 ps  Cin =  0.7 ff  Cout =   2.5 ff  Cmax = 100.0 ff  G =  349  
+ABC: Path  3 --      23 : 2    1 OR2_X2  A =   0.34  Df =  14.9   -1.7 ps  S =   5.4 ps  Cin =  0.8 ff  Cout =   7.1 ff  Cmax = 200.0 ff  G =  883  
+ABC: Path  4 --      24 : 1    1 BUF_X16 A =   1.28  Df =  23.2   -1.9 ps  S =   8.8 ps  Cin =  6.9 ff  Cout = 100.0 ff  Cmax =1600.0 ff  G = 1442  
+ABC: Start-point = pi2 (\cS [1]).  End-point = po3 (\nS [1]).
+ABC: + write_blif /tmp/yosys-abc-9T8Zam/output.blif 
+
+13.1.2. Re-integrating ABC results.
+ABC RESULTS:           AND2_X2 cells:        1
+ABC RESULTS:           AND4_X1 cells:        1
+ABC RESULTS:           BUF_X12 cells:        2
+ABC RESULTS:           BUF_X16 cells:        1
+ABC RESULTS:            BUF_X8 cells:        2
+ABC RESULTS:            INV_X1 cells:        2
+ABC RESULTS:           INV_X16 cells:        1
+ABC RESULTS:            INV_X2 cells:        1
+ABC RESULTS:           NOR2_X2 cells:        1
+ABC RESULTS:           NOR3_X2 cells:        1
+ABC RESULTS:           NOR4_X1 cells:        1
+ABC RESULTS:           NOR4_X2 cells:        1
+ABC RESULTS:            OR2_X2 cells:        1
+ABC RESULTS:        internal signals:       20
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        5
+Removing temp directory.
